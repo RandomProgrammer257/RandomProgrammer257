@@ -1,0 +1,94 @@
+#include <iostream>
+
+using namespace std;
+
+int nums;
+float averageValue=0;
+float sum = 0;
+int ma;
+
+
+class strin_g{
+
+public:float inValue;
+public:float dValue;
+public:float dValueQ;
+
+void dVS(){
+
+    dValue = inValue - averageValue;
+    dValueQ = dValue*dValue;
+}
+
+void aver(){
+
+    sum+=inValue;
+    averageValue = sum/nums;
+
+}
+
+void seeS(int num){
+
+cout << num+1 << "\t" << inValue << "\t" << dValue << "\t" << dValueQ << "\n";
+
+}
+
+};
+
+
+int main()
+{
+    cout << "Please, enter number of strings in your tablet UwU:\n";
+    cin >> nums;
+    cin.clear();
+
+    strin_g strin[nums];
+
+    for(int i = 0; i < nums; i++){
+
+        cout << "Enter your " << i+1 << " value, cutie UwO\n";
+
+        cin >> strin[i].inValue;
+        strin[i].aver();
+
+    }
+        system("cls");
+        cout << "The average result is: " << averageValue << " my dear UwU\n";
+        system("pause");
+        system("cls");
+
+        cout << "Now let`s see your experimental tablet of values, sweetie -w0\n\n";
+        cout << "n" << "\t" << "Value" << "\t" << "Av-val" << "\t" << "(Av-val)^2" << "\n\n";
+         for(int i = 0; i < nums; i++){
+            strin[i].dVS();
+            strin[i].seeS(i);
+         }
+        for(int n = 0; n<nums; n++){
+
+        if(ma > strin[n].inValue){
+
+            ma = strin[n].inValue*100;
+
+            }
+        }
+
+
+    return 0;
+
+
+}
+void matSee(){
+
+char matr[nums][ma];
+
+
+for(int k = 0; k < ma; k++){
+    for(int j = 0; j <nums; j++){
+
+        matr[k][j] = "";
+
+    }
+
+}
+
+}
