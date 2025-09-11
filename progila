@@ -38,15 +38,25 @@ cout << num+1 << "\t" << inValue << "\t" << dValue << "\t" << dValueQ << "\n";
 
 int main()
 {
-    cout << "Please, enter number of strings in your tablet UwU:\n";
+    cout<< "Hello ~UwU~\n" << "Enter number of strings for experimental tablet OwU: \n";
+    
     cin >> nums;
     cin.clear();
+    system("cls");
+while (nums == 0 || nums == NULL)
+    {
+        std::cout << "oopsie, our number is incorrect OwO\n"
+                  << "try again please ~UwU~:\n";
+        cin >> nums;
 
+        system("cls");
+    }
+    
     strin_g strin[nums];
 
     for(int i = 0; i < nums; i++){
 
-        cout << "Enter your " << i+1 << " value, cutie UwO\n";
+       cout << "lets enter your " << i + 1 << " experimental value, sweetie UwU:\n";
 
         cin >> strin[i].inValue;
         strin[i].aver();
@@ -57,7 +67,8 @@ int main()
         system("pause");
         system("cls");
 
-        cout << "Now let`s see your experimental tablet of values, sweetie -w0\n\n";
+    cout << "wow, that is your excelent tablet of values! >w<\n\n";
+    
         cout << "n" << "\t" << "Value" << "\t" << "Av-val" << "\t" << "(Av-val)^2" << "\n\n";
          for(int i = 0; i < nums; i++){
             strin[i].dVS();
@@ -84,8 +95,7 @@ char matr[nums][ma];
 
 for(int k = 0; k < ma; k++){
     for(int j = 0; j <nums; j++){
-
-        matr[k][j] = "";
+        matr[k][j] = ' ';
 
     }
 
